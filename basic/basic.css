@@ -17,7 +17,8 @@ html, body{
     position:relative;
 }
 
-.main-container .hidden{
+.main-container.hidden,
+.profile-image.hidden{
     display:none;
 }
 
