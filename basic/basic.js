@@ -3,7 +3,7 @@ const profileImage = document.getElementById("profile-image");
 const sound = document.getElementById("sound");
 
 const hide = () => {
-  mainContainer.className = "main-container hidden";
+  mainContainer.className = "main-container";
 };
 
 const imageSize = 200;
@@ -11,6 +11,7 @@ const imageSize = 200;
 const laugh = () => {
   hide();
   //position the image
+
   const { height, width } = mainContainer.getBoundingClientRect();
   profileImage.style.top = `${Math.random() * (height - imageSize)}px`;
   profileImage.style.left = `${Math.random() * (width - imageSize)}px`;
@@ -24,15 +25,16 @@ const laugh = () => {
 const handleMessage = (obj) => {
   const laughCommand = fieldData.laughCommand;
   const data = obj.detail.event.data;
+  mainContainer.innerText(`${data}`);
   const { text, displayName } = data;
   laugh();
 };
 
-window.addEventListener("onEventRecieved", (obj) => {
+window.addEventListener("onEventReceived", (obj) => {
   if (obj.detail.listener !== "message") {
     return;
   }
-  handleMessageObject(obj);
+  handleMessage(obj);
 });
 
 window.addEventListener("onWidgetLoad", (obj) => {
