@@ -1,15 +1,19 @@
 const mainContainer = document.getElementById("main-container");
 const usernameSpan = document.getElementById("new-follower_username");
+const newFollower = document.getElementById("new-follower");
 
 const hide = () => {
-  mainContainer.className = "main-container hidden";
+  newFollower.className = "new-follower hidden";
 };
+
+let hideTimer;
 
 const follower = (username) => {
   hide();
-  mainContainer.className = "main-container";
-  usernameSpan.innerText = username;
-  setTimeout(() => {
+  clearTimeout(hideTimer);
+  newFollower.className = "new-follower";
+  usernameSpan.innerText = username + "has just started following!";
+  hideTimer = setTimeout(() => {
     hide();
   }, 5000);
 };
@@ -21,7 +25,7 @@ const handleFollowEvent = (obj) => {
 };
 
 window.addEventListener("onEventReceived", (obj) => {
-  if (obj.detail.listener !== "event" || obj.detail.event.type !== "follower") {
+  if (obj.detail.listener !== "event" || obj.detail.event.type !== "follow") {
     return;
   }
   debugger;

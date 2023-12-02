@@ -1,3 +1,8 @@
+:root{
+	--purple: #211670;
+  	--orange: #f59c3f;
+}
+
 *,*:before, *:after{
     box-sizing:border-box;
 }
@@ -14,50 +19,42 @@ html, body{
     margin: 0;
     display:flex;
     align-items:center;
-    justify-content:center;
     height:100%;
     width:100%;
     position:relative;
-    animation: grow 1s linear ;
+   
 }
 
-@keyframes grow{
-    0%{
-        transform: scale(0);
-    }
-    100%{
-        transform: scale(1);
-    }
-}
 
-.main-container.hidden{
-    transform: scale(0);
-    /* display:none; */
-}
 
 .new-follower{
-    font-family: Montserrat, arial, sans-serif;
-    display:block;
-    color: #f59c3f;
-    background-image: url(https://dhillman1989.github.io/twitchWidgets/images/purplebanner.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    min-width: 300px;
-    text-align:center;
-    padding: 40px 60px;
-    font-size: 45px;
-    font-weight:700;
-    position:relative;
+    align-self: flex-end;
+    position: relative;
+    bottom:80px;
+  	left: -2px;
+    transform: translatex(0);
+    transition: transform 1s;
+    padding: 20px 40px 20px 80px;
+    color:#f59c3f;
+    font-family: 'Montserrat', helvetica, arial, sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    background: var(--purple);
+    display:flex;
+   	align-items:center;
+    gap: 20px;
+  	outline: 2px solid var(--orange);
+  	outline-offset: -2px;
+  	
 }
-.new-follower::after{
-    content: "New Follower";
-    position:absolute;
-    top: -35px;
-    left: -30px;
-    color: black;
-    font-size: 25px;
-    padding: 10px 25px;
-    background-image: url(https://dhillman1989.github.io/twitchWidgets/images/orangebanner.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+
+.new-follower img{
+    max-height: 45px;
 }
+
+.new-follower.hidden{
+    
+    transform: translatex(-100%);
+    
+}
+
