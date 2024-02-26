@@ -1,0 +1,22 @@
+{
+  "followEvent": {
+    "type": "text",
+    "label": "FollowEvent"
+  },
+  "privileges": {
+    "type": "dropdown",
+    "label": "Who can participate:",
+    "value": "everybody",
+    "options": {
+      "everybody": "Everybody",
+      "subs": "Subs + VIPs + Mods",
+      "vips": "VIPs + Mods",
+      "mods": "Mods",
+      "broadcaster": "Broadcaster"
+    }
+  },
+  "widgetName": {
+    "type": "hidden",
+    "value": "Follow Alert"
+  }
+}
