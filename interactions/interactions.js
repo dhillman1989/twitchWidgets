@@ -3,7 +3,7 @@ const soundsList = [{
         name: 'sparkle',
         src: 'https://dhillman1989.github.io/twitchWidgets/audio/sparkle.wav'
     },
-    { name: 'aha', src: 'https://dhillman1989.github.io/twitchWidgets/audio/aha.m4a' }
+    { name: 'aha', src: 'https://dhillman1989.github.io/twitchWidgets/audio/Lara_aha.wav' }
 ]
 
 layer.innerHTML = soundsList.map(s => `<audio id=${s.name} src=${s.src}>`)
