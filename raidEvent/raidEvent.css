@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+.raid-event {
+    text-align: center;
+    color: orange;
+    text-shadow: 0 0 3px purple;
+    font-size: 30px;
+    font-family: 'Bebas Neue', arial, sans-serif;
+}
+
+.hide {
+    display: none;
+}

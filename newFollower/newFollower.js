@@ -17,8 +17,10 @@ let followersList = [];
 const follower = (username) => {
     followersList.push(username);
     active = true;
-    if (typeof nextTimer == "undefined" || followersList.length > 0) {
-        sound.play();
+    if (typeof nextTimer == "undefined" && followersList.length > 0) {
+        setTimeout(() => {
+            sound.play();
+        }, 4000)
         nextTimer = setInterval(() => {
             if (followersList.length == 0) {
                 clearInterval(nextTimer);
