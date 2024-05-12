@@ -4,8 +4,8 @@ const soundsList = [
     { name: 'aha', src: 'https://dhillman1989.github.io/twitchWidgets/audio/Lara_aha.wav' },
     { name: 'scream', src: 'https://dhillman1989.github.io/twitchWidgets/audio/lara-scream.mp3' },
     { name: 'secret', src: 'https://dhillman1989.github.io/twitchWidgets/audio/secret.mp3' },
-    { name: 'larano', src: 'https://dhillman1989.github.io/twitchWidgets/audio/LARA_NO.wav' },
-    { name: 'laraheal', src: 'https://dhillman1989.github.io/twitchWidgets/audio/LARA_HEAL.wav' },
+    { name: 'larano', src: 'https://dhillman1989.github.io/twitchWidgets/audio/LARA_NO.WAV' },
+    { name: 'laraheal', src: 'https://dhillman1989.github.io/twitchWidgets/audio/LARA_HEAL.WAV' },
 
     //red Dwarf sounds
     { name: 'spaghetti', src: 'https://dhillman1989.github.io/twitchWidgets/audio/spaghetti.mp3' }
