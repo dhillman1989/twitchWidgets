@@ -1,14 +1,11 @@
 const layer = document.querySelector('#interaction-layer');
 const soundsList = [
-    //General sounds
-    {
-        name: 'sparkle',
-        src: 'https://dhillman1989.github.io/twitchWidgets/audio/sparkle.wav'
-    },
     //tombraider sounds
     { name: 'aha', src: 'https://dhillman1989.github.io/twitchWidgets/audio/Lara_aha.wav' },
     { name: 'scream', src: 'https://dhillman1989.github.io/twitchWidgets/audio/lara-scream.mp3' },
     { name: 'secret', src: 'https://dhillman1989.github.io/twitchWidgets/audio/secret.mp3' },
+    { name: 'larano', src: 'https://dhillman1989.github.io/twitchWidgets/audio/LARA_NO.wav' },
+    { name: 'laraheal', src: 'https://dhillman1989.github.io/twitchWidgets/audio/LARA_HEAL.wav' },
 
     //red Dwarf sounds
     { name: 'spaghetti', src: 'https://dhillman1989.github.io/twitchWidgets/audio/spaghetti.mp3' }
@@ -36,17 +33,17 @@ const interactionSwitch = (req) => {
 const handleMessage = (obj) => {
     if (obj.detail.event.data.text.indexOf('!') == 0) {
         const data = obj.detail.event.data;
-        const { text, displayName } = data;
+        const { text, displayName, tags } = data;
         console.log(text.replace('!', ''));
         interactionSwitch(text.replace('!', ''));
     }
 };
 
 window.addEventListener("onEventReceived", (obj) => {
+    console.log(obj);
     if (obj.detail.listener !== "message") {
         return;
     }
-    debugger;
     handleMessage(obj);
 });
 
